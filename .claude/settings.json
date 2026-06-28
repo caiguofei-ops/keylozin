@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install *)",
+      "Bash(mkdir -p \"d:/web/keylozin/src/app/products/\\\\[slug\\\\]\")",
+      "WebFetch(domain:www.amazon.com)"
+    ],
+    "additionalDirectories": [
+      "d:\\web\\keylozin\\src\\app\\products\\[slug"
+    ]
+  }
+}

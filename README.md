@@ -1,36 +1,109 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# KEYLOZIN - Family Matching Apparel Store
+
+A modern e-commerce website for KEYLOZIN, a family-themed apparel brand specializing in matching outfits for fathers, couples, siblings, and families.
+
+![KEYLOZIN](https://img.shields.io/badge/KEYLOZIN-Family%20Matching-orange?style=for-the-badge)
+![Next.js](https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-CSS-blue?style=for-the-badge)
+![Cloudflare](https://img.shields.io/badge/Cloudflare-Pages-orange?style=for-the-badge&logo=cloudflare)
+
+## Features
+
+- 🛍️ **Full E-commerce Functionality** - Product browsing, cart, checkout
+- 📱 **Responsive Design** - Works on all devices
+- 🎨 **Modern UI** - Vibrant, family-friendly design
+- 🚀 **Fast Performance** - Built with Next.js 14
+- ☁️ **Cloudflare Deployment** - Global CDN distribution
+- 🔄 **CI/CD Pipeline** - Automatic deployments via GitHub Actions
+
+## Tech Stack
+
+- **Framework**: Next.js 14 (App Router)
+- **Styling**: Tailwind CSS
+- **Icons**: Lucide React
+- **Deployment**: Cloudflare Pages
+- **CI/CD**: GitHub Actions
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18+
+- npm or yarn
+
+### Installation
 
 ```bash
+# Clone the repository
+git clone https://github.com/YOUR_USERNAME/keylozin.git
+cd keylozin
+
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the site.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build for Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## Deployment
 
-To learn more about Next.js, take a look at the following resources:
+### Cloudflare Pages
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Push your code to GitHub
+2. Go to [Cloudflare Dashboard](https://dash.cloudflare.com)
+3. Create a new Pages project
+4. Connect your GitHub repository
+5. Set build command: `npm run build`
+6. Set output directory: `.next`
+7. Add environment variables if needed
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Required Secrets
 
-## Deploy on Vercel
+Configure these in your GitHub repository settings:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- `CLOUDFLARE_API_TOKEN` - Cloudflare API token
+- `CLOUDFLARE_ACCOUNT_ID` - Cloudflare Account ID
+- `NEXT_PUBLIC_SITE_URL` - Your site URL
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Project Structure
+
+```
+keylozin/
+├── src/
+│   ├── app/
+│   │   ├── page.tsx           # Homepage
+│   │   ├── layout.tsx         # Root layout
+│   │   ├── products/         # Products pages
+│   │   ├── cart/             # Shopping cart
+│   │   ├── checkout/        # Checkout flow
+│   │   └── about/           # About page
+│   ├── components/          # React components
+│   └── lib/
+│       ├── products.ts      # Product data
+│       └── cart-context.tsx # Cart state management
+├── public/                  # Static assets
+├── wrangler.toml           # Cloudflare config
+└── .github/workflows/     # CI/CD pipeline
+```
+
+## Pages
+
+- `/` - Homepage with hero, categories, featured products
+- `/products` - Product listing with filters
+- `/products/[slug]` - Product detail page
+- `/cart` - Shopping cart
+- `/checkout` - Checkout flow
+- `/about` - About KEYLOZIN
+
+## License
+
+MIT License - see LICENSE file for details
